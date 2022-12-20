@@ -28,11 +28,13 @@
 ### Установка manifest в кластер Kubernetes:
 *kubectl apply -f manifest.yaml*
 
-*kubectl get deployments*
+Результат команды *kubectl get deployments*
 ```NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-web    2/2     2            2           39m```
+web    2/2     2            2           39m
+```
 
-*kubectl describe deployment web -n default*
+
+Результат команды *kubectl describe deployment web -n default*
 ```Name:                   web
     Namespace:              default
     CreationTimestamp:      Wed, 21 Dec 2022 00:05:58 +0300
