@@ -29,8 +29,8 @@ minikube start
 kubectl apply -f manifest.yaml
 
 kubectl get deployments
-   NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-   web    2/2     2            2           39m
+    NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+    web    2/2     2            2           39m
 
 kubectl describe deployment web -n default
     Name:                   web
