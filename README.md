@@ -7,32 +7,32 @@
 # Docker
 
 ### Создание Docker image
-*docker build -t nickb6/web:1.0.0 .
+*docker build -t nickb6/web:1.0.0 .*
 
 ### Получение id
-*docker images
+*docker images*
 
 ### Запуск контейнера для проверки работы приложения:
-*docker run -it -p 8000:8000 --name=web <image_id>
+*docker run -it -p 8000:8000 --name=web <image_id>*
 
 ### Загрузка image на DockerHub:
-*docker push nickb6/web:1.0.0
+*docker push nickb6/web:1.0.0*
 
 ---
 
 # Kubernetes
 
 ### Для удобства новый кластер Kubernetes создавался с помощью minikube:
-*minikube start
+*minikube start*
 
 ### Установка manifest в кластер Kubernetes:
-*kubectl apply -f manifest.yaml
+*kubectl apply -f manifest.yaml*
 
-*kubectl get deployments
+*kubectl get deployments*
 ```NAME   READY   UP-TO-DATE   AVAILABLE   AGE
 web    2/2     2            2           39m```
 
-*kubectl describe deployment web -n default
+*kubectl describe deployment web -n default*
 ```Name:                   web
     Namespace:              default
     CreationTimestamp:      Wed, 21 Dec 2022 00:05:58 +0300
@@ -67,6 +67,6 @@ web    2/2     2            2           39m```
 ```
 
 ### Чтобы обеспечить доступ к web-приложению внутри кластера пробросим порт:
-*kubectl port-forward --address 0.0.0.0 deployment/web 8080:8000
+*kubectl port-forward --address 0.0.0.0 deployment/web 8080:8000*
 
 Веб-приложение должно быть доступно по адрессу [id]: http://127.0.0.1:8080/hello_docker.html
