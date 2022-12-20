@@ -29,13 +29,16 @@
 *kubectl apply -f manifest.yaml*
 
 Результат команды *kubectl get deployments*
-```NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+
+```
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
 web    2/2     2            2           39m
 ```
 
 
 Результат команды *kubectl describe deployment web -n default*
-```Name:                   web
+```
+Name:                   web
     Namespace:              default
     CreationTimestamp:      Wed, 21 Dec 2022 00:05:58 +0300
     Labels:                 env=test
