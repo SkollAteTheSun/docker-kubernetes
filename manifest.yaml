@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: web
+  labels:
+    env: test
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+       env: test
+  template:
+    metadata:
+      labels:
+        env: test
+    spec:  
+      containers:
+      - name: web 
+        image: nickb6/web:1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
