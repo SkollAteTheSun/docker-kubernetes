@@ -71,7 +71,7 @@ Name:                   web
       Normal  ScalingReplicaSet  39m   deployment-controller  Scaled up replica set web-58499798bf to 2
 ```
 
-### Обеспечение доступа к web-приложению внутри кластера:
+### Обеспечение доступа к web-приложению:
 *kubectl port-forward --address 0.0.0.0 deployment/web 8080:8000*
 
 Веб-приложение должно быть доступно по адрессу http://127.0.0.1:8080/index.html
